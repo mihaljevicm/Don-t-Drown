@@ -10,3 +10,7 @@ Infinity platform runner/jumper
 											GameOver(2)
 - At last, click build and choose destination for your build
 - In destination folder open .exe file and click Play
+
+- Controls:
+Arrosw or w,a,s,d for movement forward, backward, left or right.
+Space bar for jumping
