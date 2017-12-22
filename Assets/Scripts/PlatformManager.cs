@@ -43,11 +43,11 @@ public class PlatformManager : MonoBehaviour {
         float randomXOffset = Random.Range(OffsetX.x, OffsetX.y);
         float randomZOffset = Random.Range(OffsetZ.x, OffsetZ.y);
         float newYposition = Random.Range(OffsetY.x, OffsetY.y);
-        if(_lastPlatform == null)
+        if(_lastPlatform == null) //if there is no last platform, make one
         {
             GameObject firstPlatform = Instantiate(Platforms[Random.Range(0, _numberOfPlatforms)], _transform.position, Quaternion.identity);
-            _lastPlatform = firstPlatform;
-            _lastPlatform.transform.SetParent(_transform);
+            _lastPlatform = firstPlatform; 
+            _lastPlatform.transform.SetParent(_transform); //attach this platform to PlatformManager
         }
         if (_lastPlatform)
         {

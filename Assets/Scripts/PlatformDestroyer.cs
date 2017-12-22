@@ -9,8 +9,8 @@ public class PlatformDestroyer : MonoBehaviour {
         if (other.gameObject.tag == "Platform")
         {
             Destroy(other.gameObject);
-            GameManager.gm.PlatformCount(1);
-            PlatformManager.instance.GenerateNewPlatform();
+            GameManager.gm.PlatformCount(1); //increment counter of passed platforms
+            PlatformManager.instance.GenerateNewPlatform(); // generate new platform ahead
         }
     }
 }

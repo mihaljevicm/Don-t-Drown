@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
     {
         if(CrossPlatformInputManager.GetButtonDown("Cancel"))
             {
-                Application.Quit();
+                LoadScene(3);//quit game
             }
         ChangeTime(Time.deltaTime);
     }
@@ -40,12 +40,12 @@ public class GameManager : MonoBehaviour {
     public void ChangeTime(float amount)
     {
         timer += amount;
-        TimerText.text = "Timer : " + timer.ToString();
+        TimerText.text = "Timer : " + timer.ToString(); //Print time
     }
 
     public void PlatformCount(int amount)
     {
-        platformCounter+=amount;
+        platformCounter+=amount; //count passed platforms
         PlatformCounter.text = "Switched platforms: " + platformCounter.ToString();
     }
 

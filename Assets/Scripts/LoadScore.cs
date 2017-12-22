@@ -10,7 +10,7 @@ public class LoadScore : MonoBehaviour {
 
     private void Awake()
     {
-        score = PlayerPrefs.GetInt("score");
-        ScoreText.text = "Score: " + score.ToString();
+        score = PlayerPrefs.GetInt("score"); //load score
+        ScoreText.text = "Score: " + score.ToString(); //print score in text
     }
 }

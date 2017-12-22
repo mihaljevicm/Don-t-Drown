@@ -14,14 +14,14 @@ public class WaterControl : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        _transform.position = PlatformManager.instance._lastPlatform.transform.position - new Vector3(0, _distanceFromPlatform, 0);
+        _transform.position = PlatformManager.instance._lastPlatform.transform.position - new Vector3(0, _distanceFromPlatform, 0); //always keep distance from lastly generated platform
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            GameManager.gm.SaveScore();
-            GameManager.gm.LoadScene(2);
+            GameManager.gm.SaveScore(); 
+            GameManager.gm.LoadScene(2); //start GameOver scene
         }
     }
 }
